@@ -122,21 +122,21 @@ webmaster tools guidelines procitaj-->
              <form action="https://formspree.io/dusanrandjelovic92@gmail.com" method="post" id="slanje">
 
                  <label for="ime">Ime i prezime: </label>
-                 <input id="ime" name="ime">
+                 <input id="ime" name="ime" pattern="^[ ]{0,3}[a-zA-Za-žA-Ž]{2,25}(([' -][ ]*[a-zA-Za-žA-Ž]{2,25})?[a-zA-Za-žA-Ž ]*)*$" required>
 
                  <label for="grad">Grad: </label>
-                 <input id="grad" name="grad">
+                 <input id="grad" name="grad" pattern="^[ ]{0,3}[a-zA-Za-žA-Ž]{2,25}(([' -][ ]*[a-zA-Za-žA-Ž]{2,25})?[a-zA-Za-žA-Ž ]*)*$" required>
 
                    <label for="adresa">Adresa: </label>
-                   <input id="adresa" name="adresa">
+                   <input id="adresa" name="adresa" pattern="^[ ]{0,3}[a-zA-Za-žA-Ž]{2,25}(([' -][ ]*[a-zA-Za-žA-Ž]{2,25})?[a-zA-Za-žA-Ž ]*)*$" required>
 
 
                      <label for="telefon">Telefon: </label>
-                     <input id="telefon" name="telefon" placeholder="0xx/xxx-xxxx">
+                     <input id="telefon" name="telefon" placeholder="0xx/xxx-xxxx" pattern="^[ ]{0,3}0\d{2}\/\d{3}-\d{3,4}[ ]{0,3}$" required>
 
 
                        <label for="email">Email: </label>
-                       <input id="email" name="email">
+                       <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 
                        <label for="ukcena"></label>
                        <input type="hidden" id="ukcena" name="ukcena">

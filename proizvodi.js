@@ -81,7 +81,7 @@ document.getElementById("rezultati").innerHTML += '';
 
 }
 
-const slanje = document.getElementById("slanje");
+/*const slanje = document.getElementById("slanje");
 const ime = document.getElementById("ime");
 const telefon = document.getElementById("telefon");
 const grad = document.getElementById("grad");
@@ -140,4 +140,4 @@ function proveri(event){
 
 }
 
-slanje.addEventListener("submit", proveri);
+slanje.addEventListener("submit", proveri);*/
