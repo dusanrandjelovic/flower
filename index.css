@@ -1,0 +1,52 @@
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+body {
+  /*background-image: url("img/poz1.jpg");*/
+  background-color: whitesmoke;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+nav h2 {
+  display: none;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+.thumbnail img {
+  cursor: pointer;
+  height: 140px;
+  width: 250px;
+}
+.modal-body, .modal-title {
+  text-align: center;
+}
+.panel-footer a {
+  margin-right: 5px;
+}
+/*.panel-footer p {
+  float: right;
+}*/
+
+footer .row {
+  padding-top: 1.8%;
+  padding-bottom: 1%;
+}
+footer h4 {
+  margin-bottom: 18px;
+}
+.mreza {
+  margin-right: 9px;
+}
+
+@media (max-width: 748px){
+  .panel-footer {
+    text-align: center;
+  }
+}

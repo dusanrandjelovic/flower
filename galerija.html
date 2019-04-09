@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Opis strane prema uputstvima i smernicama webmastera">
+  <meta name="keywords" content="Ovde upisati do 10 kljucnih reci">
+  <meta name="author" content="Dusan Randjelovic uspravna crta dusanrandjelovic92@gmail.com">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Front end projekat Dusan Randjelovic</title>
+
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/all.min.css" rel="stylesheet">
+<!--html5 outliner i w3 validator da prodje sajt, prvi p tekst za description, u title ime kompanije i opis delatnost kratko
+hijerarhijski h1 h2,
+webmaster tools guidelines procitaj-->
+<style>
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+.navbar-default .navbar-nav li a:hover {
+  background-color: red;
+}
+.navbar-default .navbar-nav .active a:hover {
+  background-color: red;
+}
+.navbar-default .navbar-brand:hover {
+  background-color: red;
+}
+nav h2 {
+  display: none;
+}
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.panel-footer a {
+  margin-right: 5px;
+}
+/*.panel-footer p {
+  float: right;
+}*/
+.carousel-inner > .item > img {
+  width: 100%;
+  height: auto;/*moram da obradim u fotosop i slicno sliku da visina bude ista*/
+}
+footer .row {
+  padding-top: 1.8%;
+  padding-bottom: 1%;
+}
+footer h4 {
+  margin-bottom: 18px;
+}
+.mreza {
+  margin-right: 9px;
+}
+
+@media (max-width: 748px){
+  .panel-footer {
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container"> <!--maksimalna sirina odredjena klasom kontejner, a ne margine-->
+
+  <div class="page-header">
+    <h1><a href="index.html"><a href="index.html"><img src="https://durasite.000webhostapp.com/dura.png" alt="Durasite" class="logo"></a> <small>Durasite</small></h1>
+  </div>
+
+<nav class="navbar navbar-default sticky-top"><h2>Durasite Glavna navigacija</h2><!--data-spy="affix", posle .affix u css i ista svojstva-->
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Početna strana</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="onamapravo.html">O nama <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Galerija</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proizvodi <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Proizvod 1</a></li>
+            <li><a href="#">Proizvod 2</a></li>
+            <li><a href="#">Mapa sajta</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="stampa.html">Strana za štampu</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Polje za unos">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="kontakt.html">Kontakt</a></li>
+
+
+      </ul>
+    </div><!--  u body gleda h1, main, article, aside, oblikovanje teksta(bold, italic), blockquote, cite, footer, alt-->
+  </div><!--  u head gleda title, decription, author, keyword,-->
+</nav>
+
+
+<div class="page-header">
+<h2>Galerija slika</h2>
+</div>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="4000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img/carousel/sl1.jpg" alt="..." class="img-responsive">
+      <div class="carousel-caption">
+        <p>Opis slike</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/carousel/sl2.jpg" alt="..." class="img-responsive">
+      <div class="carousel-caption">
+        <p>Opis slike</p>
+      </div>
+    </div>
+     <div class="item">
+      <img src="img/carousel/sl3.jpg" alt="..." class="img-responsive">
+      <div class="carousel-caption">
+        <p>Opis slike</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/carousel/sl4.jpg" alt="..." class="img-responsive">
+      <div class="carousel-caption">
+        <p>Opis slike</p>
+      </div>
+    </div>
+     <div class="item">
+      <img src="img/carousel/sl5.jpg" alt="..." class="img-responsive">
+      <div class="carousel-caption">
+        <p>Opis slike</p>
+      </div>
+    </div>
+
+    ...
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<footer>
+<div class="row">
+  <div class="col-md-4">
+  <h4 class="page-header">O nama</h4> <!--class="page-header"  pravi marginu naslovu-->
+  <p>  Naziv kompanije, kratak opis delatnosti kojom se kompanija bavim, misija, vizija.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ullam praesentium modi dolorum     maxime
+    in magnam delectus error corporis dolore fugiat quam, adipisci officiis natus temporibus inventore!
+    Iusto, totam culpa.</p>
+</div>
+  <div class="col-md-4">
+  <h4 class="page-header">Kontakt</h4>
+
+    <p><i class="fas fa-map-marker" aria-hidden="true"></i> Savski nasip 7, Beograd 11000</p>
+    <p><i class="fas fa-phone"></i> +381 11 201 55 00</p>
+    <p><i class="fas fa-envelope"></i> info@code.edu.rs</p>
+
+</div>
+  <div class="col-md-4">
+  <h4 class="page-header">Pratite nas!</h4>
+  <a href="http://facebook.com/" target="_blank" class="mreza"><i class="fab fa-facebook-f fa-3x"></i></a>
+   <a href="http://instagram.com/" target="_blank" class="mreza"><i class="fab fa-instagram fa-3x"></i></a>
+    <a href="http://linkedin.com/" target="_blank" class="mreza"><i class="fab fa-linkedin-in fa-3x"></i></a>
+     <a href="http://twitter.com/" target="_blank" class="mreza"><i class="fab fa-twitter fa-3x"></i></a>
+</div>
+</div>
+
+ <div class="panel-footer">
+  <div class="row">
+
+    <div class="col-md-8">
+   <a href="">O nama</a>
+   <a href="">Proizvodi</a>
+    <a href="">FAQ</a>
+     <a href="">Uslovi koriscenja</a>
+     <a href="">Kontakt</a>
+     <a href="">Mapa sajta</a>
+</div>
+<div class="col-md-4">
+ <p class="text-right">Copyright &copy; 2019 Aleksandar Simovic @ CODE</p>
+</div>
+
+</div>
+</div><!--kraj panel footera-->
+</footer>
+
+</div>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

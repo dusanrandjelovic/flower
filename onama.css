@@ -1,0 +1,13 @@
+.img-circle, .img-thumbnail, .img-rounded {
+	
+	border: 3px solid red; /*boje u hex ili rgb ne ime boje
+	display block ne za tekst, ne krij tekst i ne ponavljaj kljucne reci
+	ne pogresna navigacija, 
+
+	fiksna navigacija prilikom scrolla sa bootstrap 
+	klik na sliku da otvori prozor opisa slike modal
+	  */
+}
+#sl2 {
+	border: 3px solid red;
+}

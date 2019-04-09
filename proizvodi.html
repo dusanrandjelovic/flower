@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Opis strane prema uputstvima i smernicama webmastera">
+  <meta name="keywords" content="Ovde upisati do 10 kljucnih reci">
+  <meta name="author" content="Dusan Randjelovic uspravna crta dusanrandjelovic92@gmail.com">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Front end projekat Dusan Randjelovic</title>
+
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+<!--html5 outliner i w3 validator da prodje sajt, prvi p tekst za description, u title ime kompanije i opis delatnost kratko
+hijerarhijski h1 h2,
+webmaster tools guidelines procitaj-->
+<style>
+#rezultati {
+  color: black;
+}
+</style>
+</head>
+<body onload="Vreme()">
+
+<div class="container"> <!--maksimalna sirina odredjena klasom kontejner, a ne margine-->
+
+  <div class="page-header">
+    <div class="row">
+      <div class="col-md-10">
+    <h1><a href="index.html"><img src="https://durasite.000webhostapp.com/dura.png" alt="Durasite"></a> <small>Durasite</small></h1>
+  </div>
+  <div class="col-md-2">
+
+  <div class="input-group">
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+      </span>
+       <form name="vremeForma">
+   <input type="text" name="cifre" class="form-control">
+  </form>
+    </div>
+
+</div><!--md2-->
+</div>
+  </div>
+
+<nav class="navbar navbar-default sticky-top"><h2>Durasite Glavna navigacija</h2><!--data-spy="affix", posle .affix u css i ista svojstva-->
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Početna strana</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="onamapravo.html">O nama <span class="sr-only">(current)</span></a></li>
+        <li><a href="galerija.html">Galerija</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proizvodi <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Proizvod 1</a></li>
+            <li><a href="#">Proizvod 2</a></li>
+            <li><a href="#">Mapa sajta</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="stampa.html">Strana za štampu</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Polje za unos">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="kontakt.html">Kontakt</a></li>
+
+
+      </ul>
+    </div><!--  u body gleda h1, main, article, aside, oblikovanje teksta(bold, italic), blockquote, cite, footer, alt-->
+  </div><!--  u head gleda title, decription, author, keyword,-->
+</nav>
+
+
+  <h2>Dynamic Tabs</h2>
+  <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Naruci</h3>
+      <div class="row">
+
+           <div class="col-md-6">
+             <h1>Narudžbina</h1>
+             <h3>Uplata se vrši na račun u banci ili paypal račun. Posle uplate stići će vam željeni proizvodi.</h3>
+             <h3>Za narudžbine preko 2000 dinara, poštarina je besplatna.</h3>
+             <div id="rezultati">
+           </div>
+
+         </div>
+
+           <div class="col-md-6">
+             <form action="https://formspree.io/dusanrandjelovic92@gmail.com" method="post" id="slanje">
+
+                 <label for="ime">Ime i prezime: </label>
+                 <input id="ime" name="ime">
+
+                 <label for="grad">Grad: </label>
+                 <input id="grad" name="grad">
+
+                   <label for="adresa">Adresa: </label>
+                   <input id="adresa" name="adresa">
+
+
+                     <label for="telefon">Telefon: </label>
+                     <input id="telefon" name="telefon" placeholder="0xx/xxx-xxxx">
+
+
+                       <label for="email">Email: </label>
+                       <input id="email" name="email">
+
+                       <label for="ukcena"></label>
+                       <input type="hidden" id="ukcena" name="ukcena">
+
+                       <label for="komadi"></label>
+                       <input type="hidden" id="komadi" name="komadi">
+
+
+               <div>
+               <button>KUPI</button>
+               </div>
+
+             </form>
+           </div>
+      </div>
+    </div>
+
+
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+
+          <div class="thumbnail">
+            <h3 class="text-center">Proizvod 1</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="modal" data-target="#exampleModal1">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p class="text-center">Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p class="text-center">Cena: <strong>10 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+              <div class="text-center">
+                <input type="number" id="kol1" min=0 value=0>
+             <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+          <div class="col-sm-6 col-md-4 text-center">
+
+          <div class="thumbnail">
+            <h3>Proizvod 2</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="modal" data-target="#exampleModal2">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike broj 2...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p>Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p>Cena: <strong>8 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+                <input type="number" id="kol2" min=0 value=0>
+              <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+          <div class="col-sm-6 col-md-4 text-center">
+
+          <div class="thumbnail">
+             <h3>Proizvod 3</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="tooltip" title="Opis slike hjf fjhjf hj j jhjjj">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 3</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike broj 3...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p>Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p>Cena: <strong>10 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+                <input type="number" id="kol3" min=0 value=0>
+              <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div><!--row kraj-->
+
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+
+          <div class="thumbnail">
+            <h3 class="text-center">Proizvod 4</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="modal" data-target="#exampleModal1">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p class="text-center">Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p class="text-center">Cena: <strong>10 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+              <div class="text-center">
+                <input type="number" id="kol4" min=0 value=0>
+             <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+          <div class="col-sm-6 col-md-4 text-center">
+
+          <div class="thumbnail">
+            <h3>Proizvod 5</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="modal" data-target="#exampleModal2">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike broj 2...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p>Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p>Cena: <strong>8 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+                <input type="number" id="kol5" min=0 value=0>
+              <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+          <div class="col-sm-6 col-md-4 text-center">
+
+          <div class="thumbnail">
+             <h3>Proizvod 6</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="tooltip" title="Opis slike hjf fjhjf hj j jhjjj">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 3</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike broj 3...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p>Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p>Cena: <strong>10 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+                <input type="number" id="kol6" min=0 value=0>
+              <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div><!--row kraj-->
+
+    </div>
+
+
+
+    <div id="menu3" class="tab-pane fade">
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+
+          <div class="thumbnail">
+            <h3 class="text-center">Proizvod 7</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="modal" data-target="#exampleModal1">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p class="text-center">Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p class="text-center">Cena: <strong>10 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+              <div class="text-center">
+              <input type="number" id="kol7" min=0 value=0>
+             <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+          <div class="col-sm-6 col-md-4 text-center">
+
+          <div class="thumbnail">
+            <h3>Proizvod 8</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="modal" data-target="#exampleModal2">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike broj 2...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p>Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p>Cena: <strong>8 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+                <input type="number" id="kol8" min=0 value=0>
+              <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+          <div class="col-sm-6 col-md-4 text-center">
+
+          <div class="thumbnail">
+             <h3>Proizvod 9</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="tooltip" title="Opis slike hjf fjhjf hj j jhjjj">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 3</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike broj 3...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p>Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p>Cena: <strong>10 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+                <input type="number" id="kol9" min=0 value=0>
+              <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div><!--row kraj-->
+
+
+      <div class="row"><!--novi red-->
+        <div class="col-sm-6 col-md-4">
+
+          <div class="thumbnail">
+            <h3 class="text-center">Proizvod 10</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="modal" data-target="#exampleModal1">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 4</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p class="text-center">Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p class="text-center">Cena: <strong>50 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+              <div class="text-center">
+                <input type="number" id="kol10" min=0 value=0>
+             <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+          <div class="col-sm-6 col-md-4 text-center">
+
+          <div class="thumbnail">
+            <h3>Proizvod 11</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="modal" data-target="#exampleModal2">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 5</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike broj 2...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p>Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p>Cena: <strong>30 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+                <input type="number" id="kol11" min=0 value=0>
+              <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+          <div class="col-sm-6 col-md-4 text-center">
+
+          <div class="thumbnail">
+             <h3>Proizvod 12</h3>
+            <img src="laptop.jpg" alt="laptop" data-toggle="tooltip" title="Opis slike hjf fjhjf hj j jhjjj">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proizvod 6</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Opis slike broj 3...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+
+              <p>Ovde napisati najvažnije informacije o proizvodu...</p>
+              <p>Cena: <strong>20 <span class="glyphicon glyphicon-euro" aria-hidden="true"></span></strong></p>
+                <input type="number" id="kol12" min=0 value=0>
+              <a href="#" class="btn btn-info" role="button">Pogledajte &rarr;</a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div><!--row kraj-->
+
+    </div>
+  </div>
+
+
+
+
+<footer>
+<div class="row">
+  <div class="col-md-4">
+  <h4 class="page-header">O nama</h4> <!--class="page-header"  pravi marginu naslovu-->
+  <p>  Naziv kompanije, kratak opis delatnosti kojom se kompanija bavim, misija, vizija.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ullam praesentium modi dolorum     maxime
+    in magnam delectus error corporis dolore fugiat quam, adipisci officiis natus temporibus inventore!
+    Iusto, totam culpa.</p>
+</div>
+  <div class="col-md-4">
+  <h4 class="page-header">Kontakt</h4>
+
+    <p><i class="fas fa-map-marker" aria-hidden="true"></i> Savski nasip 7, Beograd 11000</p>
+    <p><i class="fas fa-phone"></i> +381 11 201 55 00</p>
+    <p><i class="fas fa-envelope"></i> info@code.edu.rs</p>
+
+</div>
+  <div class="col-md-4">
+  <h4 class="page-header">Pratite nas!</h4>
+  <a href="http://facebook.com/" target="_blank" class="mreza"><i class="fab fa-facebook-f fa-3x"></i></a>
+   <a href="http://instagram.com/" target="_blank" class="mreza"><i class="fab fa-instagram fa-3x"></i></a>
+    <a href="http://linkedin.com/" target="_blank" class="mreza"><i class="fab fa-linkedin-in fa-3x"></i></a>
+     <a href="http://twitter.com/" target="_blank" class="mreza"><i class="fab fa-twitter fa-3x"></i></a>
+</div>
+</div>
+
+ <div class="panel-footer">
+  <div class="row">
+
+    <div class="col-md-8">
+   <a href="onamapravo.html">O nama</a>
+   <a href="">Proizvodi</a>
+    <a href="faq.html">FAQ</a>
+     <a href="">Uslovi koriscenja</a>
+     <a href="kontakt.html">Kontakt</a>
+     <a href="">Mapa sajta</a>
+</div>
+<div class="col-md-4">
+ <p class="text-right">Copyright &copy; 2019 Aleksandar Simovic @ CODE</p>
+</div>
+
+</div>
+</div><!--kraj panel footera-->
+</footer>
+
+</div>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+<script src="proizvodi.js"></script>
+
+
+</body>
+</html>
