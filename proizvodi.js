@@ -16,8 +16,8 @@ function ukupanIznos() {
  var kolJedanaest = document.getElementById("kol11").value;
  var kolDvanaest = document.getElementById("kol12").value;
 
- var ukcena = document.getElementById("ukcena").value;
- var komadi = document.getElementById("komadi").value;
+ var ukcena = document.getElementById("ukcena");
+ var komadi = document.getElementById("komadi");
 
   cena = (kolPrvi * 10) + (kolDrugi * 8) + (kolTreci * 10) + (kolCetiri * 10) + (kolPet * 8) + (kolSest * 10)  +
   (kolSedam * 10) + (kolOsam * 8) + (kolDevet * 10) + (kolDeset * 50) + (kolJedanaest * 30) + (kolDvanaest * 20);
@@ -36,43 +36,43 @@ function ukupanIznos() {
   }
   if(kolTreci > 0){
       document.getElementById("rezultati").innerHTML += `Naručeno: proizvod 3, komada ${kolTreci}.<br>`
-        komadi.value += "Naručeno: proizvod 2, komada " + kolTreci + "." + '<br>';
+        komadi.value += "Naručeno: proizvod 3, komada " + kolTreci + "." + '<br>';
   }
   if(kolCetiri > 0){
       document.getElementById("rezultati").innerHTML += `Naručeno: proizvod 4, komada ${kolCetiri}.<br>`
-        komadi.value += "Naručeno: proizvod 2, komada " + kolCetiri + "." + '<br>';
+        komadi.value += "Naručeno: proizvod 4, komada " + kolCetiri + "." + '<br>';
   }
   if(kolPet > 0){
       document.getElementById("rezultati").innerHTML += `Naručeno: proizvod 5, komada ${kolPet}.<br>`
-        komadi.value += "Naručeno: proizvod 2, komada " + kolPet + "." + '<br>';
+        komadi.value += "Naručeno: proizvod 5, komada " + kolPet + "." + '<br>';
   }
   if(kolSest > 0){
       document.getElementById("rezultati").innerHTML += `Naručeno: proizvod 6, komada ${kolSest}.<br>`
-        komadi.value += "Naručeno: proizvod 2, komada " + kolSest + "." + '<br>';
+        komadi.value += "Naručeno: proizvod 6, komada " + kolSest + "." + '<br>';
   }
   if(kolSedam > 0){
       document.getElementById("rezultati").innerHTML += `Naručeno: proizvod 7, komada ${kolSedam}.<br>`
-        komadi.value += "Naručeno: proizvod 2, komada " + kolSedam + "." + '<br>';
+        komadi.value += "Naručeno: proizvod 7, komada " + kolSedam + "." + '<br>';
   }
   if(kolOsam > 0){
       document.getElementById("rezultati").innerHTML += `Naručeno: proizvod 8, komada ${kolOsam}.<br>`
-        komadi.value += "Naručeno: proizvod 2, komada " + kolOsam + "." + '<br>';
+        komadi.value += "Naručeno: proizvod 8, komada " + kolOsam + "." + '<br>';
   }
   if(kolDevet > 0){
       document.getElementById("rezultati").innerHTML += `Naručeno: proizvod 9, komada ${kolDevet}.<br>`
-        komadi.value += "Naručeno: proizvod 2, komada " + kolDevet + "." + '<br>';
+        komadi.value += "Naručeno: proizvod 9, komada " + kolDevet + "." + '<br>';
   }
   if(kolDeset > 0){
       document.getElementById("rezultati").innerHTML += `Naručeno: proizvod 10, komada ${kolDeset}.<br>`
-        komadi.value += "Naručeno: proizvod 2, komada " + kolDeset + "." + '<br>';
+        komadi.value += "Naručeno: proizvod 10, komada " + kolDeset + "." + '<br>';
   }
   if(kolJedanaest > 0){
       document.getElementById("rezultati").innerHTML += `Naručeno: proizvod 11, komada ${kolJedanaest}.<br>`
-        komadi.value += "Naručeno: proizvod 2, komada " + kolJedanaest + "." + '<br>';
+        komadi.value += "Naručeno: proizvod 11, komada " + kolJedanaest + "." + '<br>';
   }
   if(kolDvanaest > 0){
       document.getElementById("rezultati").innerHTML += `Naručeno: proizvod 12, komada ${kolDvanaest}.`
-        komadi.value += "Naručeno: proizvod 2, komada " + kolDvanaest + "." + '<br>';
+        komadi.value += "Naručeno: proizvod 12, komada " + kolDvanaest + "." + '<br>';
   }
   else {
 document.getElementById("rezultati").innerHTML += '';
